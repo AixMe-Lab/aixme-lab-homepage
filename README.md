@@ -1,2 +1,23 @@
-# aixme-lab-homepage
-AI×Me Lab homepage — reports, columns and AI radio
+# AI×Me Lab ホームページ
+
+紺・白・黄緑の草案画像をもとにした、レスポンシブな静的HTMLサイトです。
+
+## 構成
+- ヘッダー：ホーム／浅野翔太／黒川聖羅／開発情報
+- 浅野翔太：人物写真、最新企画レポート、過去一覧への予定表示
+- 黒川聖羅：人物写真、最新コラム、過去一覧への予定表示
+- 開発コンテンツ：AIラジオのみ
+
+人物はAIで制作したキャラクターです。記事本文・公開先は草案段階のサンプルです。一覧やラジオのボタンは準備中の案内を表示します。実際の公開URLが決まったらリンクを置き換えてください。
+
+## ローカル表示
+`python -m http.server 8765 --bind 127.0.0.1`
+
+ブラウザーで http://127.0.0.1:8765/ を開いてください。
+
+## GitHub Pages
+Settings → Pages → Deploy from a branch → main / (root) を選択します。
+予定URL: https://aixme-lab.github.io/aixme-lab-homepage/
+
+依存パッケージやビルドは不要です。画像の表示範囲はSVGのviewBoxで指定し、同じPNGを共有しています。本文とボタンは通常のHTMLです。
+
