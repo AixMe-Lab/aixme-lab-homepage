@@ -4,3 +4,56 @@
 @media(max-width:1000px){.hero{min-height:460px}.hero-copy{padding-top:35px;padding-bottom:35px}.eyebrow{font-size:8px}.eyebrow:after{width:20px;margin-left:10px}.hero h1{font-size:clamp(41px,5.5vw,55px)}.hero-detail{font-size:12px}.hero-names>span{padding:0 14px}.hero-names strong{font-size:16px}.hero-names small{font-size:8px}.content{padding:0 30px}.editorial-row{gap:28px}.person{min-height:430px}.intro{font-size:14px}.article-panel h2{font-size:30px}.latest h3{font-size:19px}.latest>p:last-child{font-size:12px}.radio{gap:28px;grid-template-columns:54% 1fr}.radio-title h3{font-size:35px}.radio-lead{font-size:16px}.radio-copy>p:not(.radio-lead):not(.muted){font-size:12px}.radio-actions{gap:8px;margin-top:18px}.dark-button,.outline-button{font-size:11px;padding:9px 12px}.person-button{left:14px;bottom:15px;padding:10px 13px;font-size:12px}.radio-visual{aspect-ratio:1.8}.footer{gap:16px}.footer .brand{font-size:24px}}
 @media(max-width:680px){html{scroll-padding-top:25px}.header{padding:18px 20px 12px;gap:15px;flex-wrap:wrap;justify-content:center}.header .brand{font-size:32px}.header nav{width:100%;gap:0;justify-content:space-between}.nav-link{font-size:12px;padding:8px 4px;min-height:40px}.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:30px 27px 34px}.eyebrow{font-size:9px;margin-bottom:20px}.eyebrow:after{width:35px}.hero h1{font-size:clamp(41px,10.8vw,65px);line-height:1.2}.hero-detail{font-size:13px;margin-top:20px}.lime-button{padding:10px 25px;font-size:14px;margin-top:22px}.hero-portrait{height:auto;aspect-ratio:1.5}.hero-names{left:5%;right:5%;bottom:17px}.hero-names strong{font-size:16px}.hero-names small{font-size:9px}.hero-names>span{padding:0 28px}.content{padding:0 20px}.editorial-row{grid-template-columns:1fr;padding:29px 0;gap:22px}.person{min-height:0;aspect-ratio:1.1}.person-button{left:14px;bottom:14px;min-height:44px;font-size:13px}.author-line{font-size:16px;margin-bottom:11px}.article-panel h2{font-size:29px;margin-bottom:11px}.intro{font-size:14px;margin-bottom:19px}.desktop-break{display:none}.latest h3{font-size:21px}.latest>p:last-child{font-size:13px}.archive-link{margin-top:16px;font-size:14px}.sample-note{margin-top:-6px;font-size:10px}.section-heading{gap:12px;margin-bottom:20px}.section-heading h2{font-size:27px}.section-heading span{font-size:8px}.development{padding-top:29px;padding-bottom:31px}.radio{grid-template-columns:1fr;gap:20px}.radio-visual{aspect-ratio:2.195}.radio-title h3{font-size:35px}.radio-lead{font-size:19px}.radio-copy>p:not(.radio-lead):not(.muted){font-size:13px}.radio-actions{gap:12px}.dark-button,.outline-button{font-size:13px;flex:1;min-height:45px}.footer{padding:23px 20px;flex-wrap:wrap;gap:14px}.footer .brand{font-size:25px}.tagline{font-size:10px;padding-left:14px}.footer>p{width:100%;text-align:left;margin:0}.article-photo{aspect-ratio:2.7}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Keep each mobile profile beside its latest article. */
+@media(max-width:680px){
+  .content{padding-inline:14px}
+  .editorial-row{grid-template-columns:minmax(0,42fr) minmax(0,58fr);gap:14px;padding-block:24px;align-items:stretch}
+  .person{min-height:0;aspect-ratio:auto}
+  .person-button{left:6px;right:6px;bottom:8px;min-height:44px;padding:7px 4px;display:block;font-size:10px;line-height:1.5;text-align:center}
+  .person-button span{display:inline-block;margin-left:4px}
+  .article-panel{min-width:0}
+  .author-line{font-size:12px;gap:10px;margin-bottom:6px}
+  .article-panel h2{font-size:18px;line-height:1.5;white-space:normal;margin-bottom:8px}
+  .intro{font-size:12px;line-height:1.75;margin-bottom:12px}
+  .article-photo{aspect-ratio:2.3}
+  .sample-label{font-size:8px;margin-block:7px 4px}
+  .latest h3{font-size:15px;line-height:1.55;margin-bottom:4px}
+  .latest>p:last-child{font-size:12px;line-height:1.75}
+  .archive-link{font-size:12px;line-height:1.6;gap:6px;margin-top:12px;padding-top:8px;align-self:stretch;justify-content:space-between;text-align:left}
+  .archive-link span{flex-shrink:0}
+}
+
+
+/* Reference-based character photos and compact development banner. */
+img.photo{display:block;width:100%;object-fit:cover;object-position:center 30%}
+.hero-portrait>img.photo{object-position:center center}
+.radio-banner{position:relative;display:grid;grid-template-columns:1fr 230px;min-height:180px;max-width:900px;margin:0 auto;background:var(--navy);color:white;overflow:hidden;border-radius:3px}
+.radio-banner-copy{padding:23px 30px;position:relative;z-index:1}
+.radio-kicker{font-size:9px;letter-spacing:.16em;color:#c9d5dd;margin-bottom:5px}
+.radio-banner h3{font:600 32px/1.5 var(--serif)}
+.radio-banner-copy>p:last-of-type{font-size:13px;margin-top:3px}
+.development-badge{display:inline-block;background:var(--lime);color:var(--navy);font-size:10px;font-weight:700;padding:1px 12px;margin-top:11px;border-radius:2px}
+.radio-banner-visual{position:relative;min-width:0;overflow:hidden}
+.radio-banner-visual svg{position:absolute;inset:0}
+.radio-banner-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy),transparent 30%)}
+.news-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:30px}
+.news-card{display:block;border:1px solid #d4dce2;border-radius:3px;overflow:hidden;transition:box-shadow .18s}
+.news-card:hover{box-shadow:0 7px 22px #10243820}
+.news-card>img{display:block;width:100%;height:auto;aspect-ratio:1.9;object-fit:cover;object-position:center}
+.news-card-copy{padding:16px 20px 19px}
+.news-kicker{font-size:9px;letter-spacing:.13em;color:var(--muted);margin-bottom:4px}
+.news-card h3{display:flex;justify-content:space-between;gap:10px;font:600 21px/1.6 var(--serif)}
+.news-card h3 span{font:16px var(--sans);padding-top:6px}
+.news-card-copy>p:last-child{font-size:12px;margin-top:5px}
+@media(max-width:680px){
+ .radio-banner{grid-template-columns:minmax(0,1fr) 100px;min-height:133px}
+ .radio-banner-copy{padding:16px 0 16px 18px}
+ .radio-kicker{font-size:7px;letter-spacing:.06em;margin-bottom:5px}
+ .radio-banner h3{font-size:24px}
+ .radio-banner-copy>p:last-of-type{font-size:11px}
+ .development-badge{font-size:9px;margin-top:7px}
+ .news-links{grid-template-columns:1fr;gap:18px;margin-top:23px}
+ .news-card-copy{padding:12px 16px 15px}
+ .news-card h3{font-size:20px}
+}
